@@ -1,0 +1,45 @@
+{
+  "name": "vscode-text-to-speech",
+  "displayName": "Text2Speech",
+  "description": "Read selected text out loud",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-text-to-speech.readSelected"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-text-to-speech.readSelected",
+        "title": "Read Selected Text"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.85.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "say": "^0.16.0"
+  },
+  "publisher": "vinod-kayartaya",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinod-kayartaya/vscode-text-to-speech.git"
+  },
+  "license": "MIT"
+}
